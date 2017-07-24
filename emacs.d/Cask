@@ -1,0 +1,27 @@
+(source gnu)
+(source melpa)
+(source marmalade)
+
+(depends-on "ag")
+(depends-on "flycheck")
+(depends-on "flycheck-cask")
+(depends-on "auto-complete")
+(depends-on "powerline")
+(depends-on "popup")
+(depends-on "color-theme")
+(depends-on "smart-mode-line")
+(depends-on "smart-mode-line-powerline-theme")
+(depends-on "multi-term")
+
+(depends-on "go-mode")
+(depends-on "go-autocomplete")
+(depends-on "coffee-mode")
+(depends-on "markdown-mode")
+(depends-on "yaml-mode")
+(depends-on "json-mode")
+
+(depends-on "ruby-electric")
+(depends-on "ruby-block")
+(depends-on "web-mode")
+
+(depends-on "terraform-mode")
