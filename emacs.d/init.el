@@ -1,6 +1,11 @@
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(setq warning-suppress-log-types '((package reinitialization)))
 
 ;; cask
-(require 'cask "~/.cask/cask.el")
+(require 'cask "/usr/local/opt/cask/cask.el")
 (cask-initialize)
 
 ;;; Code:
@@ -37,7 +42,7 @@
 
 ;; font
 (set-face-attribute 'default nil
-                    :family "Momaco"
+                    :family "Monaco"
                     :height 120)
 
 ;; multi-term
@@ -125,7 +130,7 @@
               (- (region-end) (region-beginning)))
     ""))
 
-(add-to-list 'default-mode-line-format
+(add-to-list 'mode-line-format
              '(:eval (count-lines-and-chars)))
 
 (define-key global-map (kbd "C-\\") 'hs-toggle-hiding)
@@ -141,6 +146,10 @@
 (require 'json-mode)
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 (add-to-list 'auto-mode-alist '("\\.template$" . json-mode))
+
+;;dockerfile-mode
+(require 'dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
 ;; C-iで括弧の中身削除
 ;;(require 'misc)
